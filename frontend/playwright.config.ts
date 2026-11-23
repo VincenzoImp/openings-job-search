@@ -10,6 +10,8 @@ const CI = !!process.env.CI;
 const PERFORMANCE = "performance.spec.ts";
 const SCREENSHOTS = "screenshots.spec.ts";
 const VIDEO = "video.spec.ts";
+// Starts the browser with a Chromium-only option; WebKit refuses to start.
+const CHROMIUM_ONLY = "address.spec.ts";
 const desktop = { width: 1440, height: 1000 };
 const mobile = { width: 390, height: 844 };
 // The captures show the application's PDFs, so they run in a browser with a
@@ -44,12 +46,12 @@ export default defineConfig<Options, WorkerOptions>({
     },
     {
       name: "webkit",
-      testIgnore: [PERFORMANCE, SCREENSHOTS, VIDEO],
+      testIgnore: [PERFORMANCE, SCREENSHOTS, VIDEO, CHROMIUM_ONLY],
       use: { browserName: "webkit", viewport: desktop },
     },
     {
       name: "webkit-mobile",
-      testIgnore: [PERFORMANCE, SCREENSHOTS, VIDEO],
+      testIgnore: [PERFORMANCE, SCREENSHOTS, VIDEO, CHROMIUM_ONLY],
       use: { browserName: "webkit", viewport: mobile },
     },
     // The performance budget starts its own large workspace (25,000 jobs).

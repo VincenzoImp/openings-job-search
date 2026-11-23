@@ -3,17 +3,14 @@ import { startServer, type Server } from "./server";
 
 // A dashboard opened from a server or NAS by its own name, while agents and
 // upload links use the public URL (127.0.0.1 by default): the owner sees which
-// variable to set. Chromium resolves the synthetic name to this machine.
+// variable to set. Chromium resolves the synthetic name to this machine;
+// WebKit has no such option, so its projects leave this file out
+// (playwright.config.ts).
 const NAS = "nas.example";
 test.use({
   signedIn: false,
   launchOptions: { args: [`--host-resolver-rules=MAP ${NAS} 127.0.0.1`] },
 });
-// WebKit has no such option and refuses to start with it.
-test.skip(
-  ({ browserName }) => browserName !== "chromium",
-  "only Chromium can map the synthetic name",
-);
 
 let server: Server;
 test.beforeAll(async () => {
