@@ -9,6 +9,11 @@ test.use({
   signedIn: false,
   launchOptions: { args: [`--host-resolver-rules=MAP ${NAS} 127.0.0.1`] },
 });
+// WebKit has no such option and refuses to start with it.
+test.skip(
+  ({ browserName }) => browserName !== "chromium",
+  "only Chromium can map the synthetic name",
+);
 
 let server: Server;
 test.beforeAll(async () => {
