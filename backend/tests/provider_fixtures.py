@@ -230,6 +230,15 @@ def provider_postings():
             source="recruitee",
         ),
         _ats(
+            "teamtailor",
+            "example",
+            "role-1",
+            "Platform Engineer",
+            "https://example.teamtailor.com/jobs/1-platform-engineer",
+            {"title": "Platform Engineer", "guid": "role-1", "description": TEXT},
+            source="teamtailor",
+        ),
+        _ats(
             "personio",
             "example",
             "7001",

@@ -357,6 +357,7 @@ export function detectBoard(
   if (host.endsWith(".oraclecloud.com"))
     return { kind: "oracle", board: host.split(".")[0] };
   return (
+    suffix(".teamtailor.com", "teamtailor") ??
     suffix(".recruitee.com", "recruitee") ??
     suffix(".jobs.personio.de", "personio") ??
     suffix(".breezy.hr", "breezy") ??

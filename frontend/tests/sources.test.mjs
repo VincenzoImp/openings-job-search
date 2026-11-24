@@ -170,6 +170,11 @@ test("a careers page names its job board before the server is asked", () => {
     kind: "recruitee",
     board: "example",
   });
+  assert.deepEqual(detect("https://example.teamtailor.com/jobs/1-engineer"), {
+    kind: "teamtailor",
+    board: "example",
+  });
+  assert.equal(detect("https://example.teamtailor.com.evil.test/jobs"), null);
   assert.equal(detect("https://example.test/careers"), null);
   assert.equal(detect("not an address"), null);
   assert.equal(

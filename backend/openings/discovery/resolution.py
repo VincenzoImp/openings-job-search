@@ -61,6 +61,8 @@ def detect_source(url: str) -> dict:
         host == "api.ashbyhq.com" and len(parts) >= 3 and parts[:2] == ["posting-api", "job-board"]
     ):
         kind, board = "ashby", parts[2]
+    elif host.endswith(".teamtailor.com"):
+        kind, board = "teamtailor", host.removesuffix(".teamtailor.com")
     elif host.endswith(".recruitee.com"):
         kind, board = "recruitee", host.removesuffix(".recruitee.com")
     elif host.endswith((".jobs.personio.de", ".jobs.personio.com")):

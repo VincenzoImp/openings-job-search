@@ -29,6 +29,7 @@ COMPANY_ADAPTERS = {
     "ashby": CompanyAdapter("inline", candidates=False),
     "recruitee": CompanyAdapter("inline"),
     "personio": CompanyAdapter("inline"),
+    "teamtailor": CompanyAdapter("inline", candidates=False),
     "workable": CompanyAdapter("inline"),
     "breezy": CompanyAdapter("metadata"),
     "smartrecruiters": CompanyAdapter("separate"),

@@ -10,7 +10,7 @@ are welcome as an issue.
 
 | | Self-hosted | Account | AI inside | Agent via MCP | Collects from company job boards | One-key triage | Auto-apply | License |
 |---|---|---|---|---|---|---|---|---|
-| **Openings** | Yes: one container, one SQLite file | No; an owner password | None: bring your own agent | The whole workspace | 12 platforms | Yes, every decision undoable | No: nothing in it can submit to an employer | MIT |
+| **Openings** | Yes: one container, one SQLite file | No; an owner password | None: bring your own agent | The whole workspace | 13 platforms | Yes, every decision undoable | No: nothing in it can submit to an employer | MIT |
 | A spreadsheet | Your choice | Your choice | No | No | No | No | No | — |
 | Huntr, Teal, Simplify | No: hosted services [^saas] | Yes [^saas] | Yes, on paid plans [^saas] | Not documented | No: a browser extension saves jobs [^saas] | Not documented | Autofill (Huntr, Simplify); Simplify+ "Autopilot" [^saas] | Proprietary |
 | Auto-apply bots, such as AIHawk | Runs on your desktop [^aihawk] | An LLM provider account [^aihawk] | Yes [^aihawk] | No [^aihawk] | Not documented | No | **Yes**: fills and submits forms [^aihawk] | MIT [^aihawk] |
@@ -44,7 +44,7 @@ extension, no reply detection from your mailbox and no auto-apply.
 ## Openings, in its own docs
 
 - Collection: LinkedIn, Indeed and Glassdoor searches, company careers pages on
-  12 platforms, the Hacker News "Who is hiring?" thread and RSS
+  13 platforms, the Hacker News "Who is hiring?" thread and RSS
   ([Jobs and sources](user/jobs-and-sources.md#sources)).
 - Triage: one key to shortlist or dismiss, every decision undoable
   ([Jobs and sources](user/jobs-and-sources.md#review-jobs)).

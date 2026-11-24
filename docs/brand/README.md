@@ -77,7 +77,7 @@ Each pillar has a fixed subject: Openings, your agent or you.
    default per kind.
 2. **Openings brings in the jobs.** Your searches and watched companies bring in fresh
    jobs every day. Repeats are left out and likely copies are flagged. Sources cover
-   LinkedIn, Indeed and Glassdoor guest searches, careers pages on 12 hiring platforms,
+   LinkedIn, Indeed and Glassdoor guest searches, careers pages on 13 hiring platforms,
    HN "Who is hiring?", RSS and job links. Each source shows *found · ever shortlisted ·
    applied*, and language labels come with a filter.
 3. **Your agent decides, prepares and ranks.** Your agent reads each new job by your
@@ -116,7 +116,7 @@ Each pillar has a fixed subject: Openings, your agent or you.
   `›` for paths (Jobs › New, Settings › API & agents).
 - **Spelling.** American. The demo persona's "British spelling" rule is data, not house
   style.
-- **Numbers.** Product facts only (12 hiring platforms, 11 skills). No personal or
+- **Numbers.** Product facts only (13 hiring platforms, 11 skills). No personal or
   outcome numbers; demo numbers are labelled "Example data".
 - **Say:** fresh, deduplicated (repeats left out, likely copies flagged), tailored,
   ranked, best first, by your rules, in your own words, by hand · REST · MCP. The queue
@@ -145,7 +145,7 @@ Product facts only. No personal usage or outcome numbers anywhere.
   (Claude Code, Codex, any MCP client).
 - One container, one SQLite file, amd64 and arm64, an image under 100 MB.
 - Openings collects from LinkedIn, Indeed and Glassdoor searches (guest endpoints, no
-  login), company careers pages on 12 platforms that collect automatically (13
+  login), company careers pages on 13 platforms that collect automatically (14
   adapters; Breezy is preview-only), the Hacker News "Who is hiring?" thread,
   RSS, and job links.
 - `docker run … demo` (#331).

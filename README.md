@@ -48,7 +48,7 @@ You set these up once, by hand or with your agent.
 
 ![A template on Preview](docs/images/templates.png)
 
-**Sources.** LinkedIn, Indeed and Glassdoor searches (no login), careers pages on 12 hiring platforms, Hacker News, RSS feeds and job links. Each shows found · ever shortlisted · applied, to tune over time.
+**Sources.** LinkedIn, Indeed and Glassdoor searches (no login), careers pages on 13 hiring platforms, Hacker News, RSS feeds and job links. Each shows found · ever shortlisted · applied, to tune over time.
 
 ![Sources and their counts](docs/images/sources.png)
 
@@ -189,7 +189,7 @@ curl -fsS http://127.0.0.1:8080/api/v1/jobs/triage -H "Authorization: Bearer $OP
 | Runs on your machine | Yes: one container, one SQLite file | No: hosted services | Yes | Yes: in your AI CLI |
 | AI | Bring your own agent, over MCP | Built in, on paid plans | Built in | Your CLI's agent |
 | Holds your career, rules and templates | Yes: Profile, Preferences, Templates | A profile and resumes | A profile for forms | Files in your CLI's folder |
-| Collects from company job boards | 12 platforms, on your schedule | No: a browser extension saves jobs | Not documented | Ashby, Greenhouse, Lever, Wellfound |
+| Collects from company job boards | 13 platforms, on your schedule | No: a browser extension saves jobs | Not documented | Ashby, Greenhouse, Lever, Wellfound |
 | Auto-apply | No: you send each one | Autofill; Simplify+ "Autopilot" | Yes: fills and submits forms | No |
 
 career-ops and Openings work well together. More tools, with sources: [Openings compared](docs/comparison.md).
@@ -221,7 +221,7 @@ career-ops and Openings work well together. More tools, with sources: [Openings 
 
 **What does it cost?** Nothing: MIT-licensed. Your agent costs what your plan costs.
 
-**Which sites?** LinkedIn anywhere; Indeed and Glassdoor by country; [12 hiring platforms](docs/user/jobs-and-sources.md). Missing one? [Request a job site](https://github.com/VincenzoImp/openings-job-search/issues/new?template=job_site_request.yml).
+**Which sites?** LinkedIn anywhere; Indeed and Glassdoor by country; [13 hiring platforms](docs/user/jobs-and-sources.md). Missing one? [Request a job site](https://github.com/VincenzoImp/openings-job-search/issues/new?template=job_site_request.yml).
 
 **What if LinkedIn blocks me?** A refused site is paused and retried later ([details](docs/user/operations.md#a-job-site-refused-requests)).
 

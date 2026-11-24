@@ -106,7 +106,7 @@ def sources_list(ws: WS, query: Q[SourceQuery]) -> SourcePage:
 
 @operation("POST /sources/batch", access=WRITE, open_world=True, tags=["sources"])
 def sources_save(ws: WS, body: SourcesSave) -> BatchResult:
-    """Add or update up to 50 sources (saved searches, company boards, feeds).
+    """Save up to 50 sources (saved searches, company boards, feeds).
 
     source_id with expected_version updates. A new source is paused unless enabled true.
     Preview a new source with sources_run first.

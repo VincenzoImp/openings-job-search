@@ -118,6 +118,56 @@ test("add a search: Test shows the first ten results, then Save adds it", async 
   );
 });
 
+test("Teamtailor careers pages are detected, previewed and saved", async ({
+  page,
+}, testInfo) => {
+  await page.route("**/api/v1/sources/preview", (route) =>
+    route.fulfill({
+      json: {
+        kind: "teamtailor",
+        total: 1,
+        listed: 1,
+        preview_limit: 20,
+        items: [
+          {
+            source_key: "teamtailor:example:role-1",
+            title: "Platform Engineer",
+            company: "Example",
+            location: "Paris, France · Berlin, Germany",
+            posting: "Build synthetic services.",
+          },
+        ],
+        diagnostics: [],
+      },
+    }),
+  );
+  await go(page, "sources");
+  await page.getByRole("button", { name: "Add source" }).first().click();
+  const form = editor(page);
+  await form.getByLabel("Kind").selectOption("company");
+  await form
+    .getByLabel("Careers page address")
+    .fill("https://example.teamtailor.com/jobs");
+  await expect(form).toContainText("Teamtailor");
+  await form.getByRole("button", { name: "Test", exact: true }).click();
+  await expect(form.locator(".src-test")).toContainText("Platform Engineer");
+  await expect(form.locator(".src-test")).toContainText(
+    "Paris, France · Berlin, Germany",
+  );
+  await fitsViewport(page);
+  await page.screenshot({
+    path: testInfo.outputPath("teamtailor.png"),
+  });
+  const name = unique("Synthetic Teamtailor");
+  await form.getByLabel(/^Name/).fill(name);
+  await form.getByRole("button", { name: "Save", exact: true }).click();
+  await expect(toast(page)).toContainText(`Added “${name}”`);
+  expect(await sourceNamed(page, name)).toMatchObject({
+    kind: "teamtailor",
+    config: { board: "example" },
+  });
+});
+
 test("add the HN Who is hiring thread: Test reads it, Save adds it", async ({
   page,
 }) => {

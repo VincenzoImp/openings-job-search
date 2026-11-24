@@ -19,7 +19,7 @@ apply.
 - **Your templates.** Templates hold your own TeX for the CV and the letter, with
   a Preview and Limits on pages and bullets.
 - **Your sources.** Sources hold LinkedIn, Indeed and Glassdoor searches (no
-  login), careers pages on 12 hiring platforms, the Hacker News "Who is hiring?"
+  login), careers pages on 13 hiring platforms, the Hacker News "Who is hiring?"
   thread, RSS feeds and job links. Each shows found · ever shortlisted · applied.
 - **Your applications.** Openings tracks replies, follow-ups and deadlines, and
   your agent saves a brief on the application before each interview.

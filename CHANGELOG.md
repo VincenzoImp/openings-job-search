@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Follow Teamtailor careers pages as company sources, with posting text and all locations. `*.teamtailor.com` addresses are detected when adding a source. Remote status is normalized; feeds with 100 jobs are marked capped.
 - Detect Czech and Romanian job postings for language labels and filtering.
 
 ## 0.28.1 — 2026-11-16
